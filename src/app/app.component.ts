@@ -1,19 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: [
-    trigger('fadeInOut', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition('void <=> *', animate('500ms ease-in-out')),
-    ])
-  ]
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
 
@@ -75,4 +66,28 @@ export class AppComponent implements OnInit, OnDestroy {
       this.intervalSubscription.unsubscribe();
     }
   }
+
+
+  showDropdownMenu(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (target) {
+      const dropdown = target.closest('.dropdown');
+      const dropdownMenu = dropdown?.querySelector('.dropdown-menu');
+      if (dropdownMenu) {
+        dropdownMenu.classList.add('show');
+      }
+    }
+  }
+
+  hideDropdownMenu(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (target) {
+      const dropdown = target.closest('.dropdown');
+      const dropdownMenu = dropdown?.querySelector('.dropdown-menu');
+      if (dropdownMenu) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  }
+
 }

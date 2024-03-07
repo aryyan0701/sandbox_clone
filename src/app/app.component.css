@@ -1,0 +1,15 @@
+.dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .first {
+    width: 800px; /* Adjust as needed */
+  }
+
+  .third{
+    width: 450px;
+  }
