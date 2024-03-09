@@ -1,7 +1,7 @@
 <!-- navbar seciton -->
-<nav class="navbar bg-dark p-3" style="font-family: sans-serif;">
+<nav class="navbar p-3" style="font-family: sans-serif; background-color: #262626;">
   <div class="container-fluid">
-    <span class="navbar-brand text-white"
+    <span class="navbar-brand text-white"  href="#" 
       >Envato <span class="text-success">Market</span>
     </span>
     <form class="d-flex" role="search">
@@ -11,7 +11,7 @@
 </nav>
 
 <!-- Hero section -->
-<div class="container-fluid p-3 position-relative" style="font-family: sans-serif;">
+<div class="container-fluid p-3 position-relative" style="font-family: sans-serif;" *ngIf="showContent">
   <img src="https://sandbox.elemisthemes.com/assets/img/photos/blurry.png" class="position-absolute top-0 start-0 w-100 h-100 opacity-50" alt="Background Image" style="object-fit: cover; z-index: -1;">
   <div class="row align-items-center">
     <div class="col-md-3 col-8 text-center mb-md-0">
@@ -56,22 +56,58 @@
           <div class="container" style="background-color: black;">
             <div class="row justify-content-center align-items-center">
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 1</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 2</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" (click)="navigateToDemothree()" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 3</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 4</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 5</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
               <div class="col-4">
-                <img src="https://sandbox.elemisthemes.com/assets/img/illustrations/i2.png" class="img-fluid mb-3" alt="...">
+                <div class="card text-bg-dark mb-3" style="max-width: 18rem; cursor:pointer">
+                  <div class="card-header">Demo 6</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -90,7 +126,7 @@
         >
           Pages
         </span>
-        <ul class="dropdown-menu mb-2">
+        <ul class="dropdown-menu mb-2" >
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">Services <i class="fa-solid fa-chevron-right mx-2"></i></a></li>
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">About <i class="fa-solid fa-chevron-right mx-4"></i></a></li>
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">Shop <i class="fa-solid fa-chevron-right mx-4"></i></a></li>
@@ -113,7 +149,7 @@
         >
           Project
         </span>
-        <ul class="dropdown-menu third mb-2">
+        <ul class="dropdown-menu third mb-2" >
           <div class="container">
             <div class="row">
               <div class="col">
@@ -142,7 +178,7 @@
     </div>
     <div class="col-md col-12 mb-3 mb-md-0 d-none d-md-block">
       <!-- Hide on small screens -->
-      <div class="container-item dropdown" (mouseover)="showDropdownMenu($event)"
+      <div class="container-item dropdown"  (mouseover)="showDropdownMenu($event)"
       (mouseout)="hideDropdownMenu($event)">
         <span
           class="dropdown-toggle"
@@ -152,7 +188,7 @@
         >
           Blogs
         </span>
-        <ul class="dropdown-menu mb-4">
+        <ul class="dropdown-menu mb-4" >
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">Blog without Sidebar </a></li>
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">Blog with Sidebar </a></li>
           <li><a class="dropdown-item" style="font-family: sans-serif; text-decoration: solid; font-weight: bold; color: #343f52;" href="#">Blog with Left Sidebar </a></li>
@@ -172,7 +208,8 @@
         >
           Documentation
         </span>
-        <ul class="dropdown-menu five" id="demoDropdownMenu">
+        <ul class="dropdown-menu five" style="left: auto !important;
+        right: 0 !important;" id="demoDropdownMenu">
           <div class="container" style="background-color: black;">
             <div class="row justify-content-center align-items-center mb-2">
               <div class="col">
@@ -204,6 +241,7 @@
 <div
   class="container text-center mb-5"
   style="max-width: 1500px; border-radius: 10px; font-family: sans-serif;"
+  *ngIf="showContent"
 >
 <img src="https://sandbox.elemisthemes.com/assets/img/photos/blurry.png" class="position-absolute top-0 start-0 w-100 h-100 opacity-50" alt="Background Image" style="object-fit: cover; z-index: -1;">
   <div class="container-body p-3 p-md-5">
@@ -229,9 +267,9 @@
   </div>
 
  <!-- slider images -->
-<div id="carouselfirstsection" class="carousel slide mb-5">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+<div id="carouselfirstsection" class="carousel slide mb-5" *ngIf="showContent" #carousel>
+  <div class="carousel-inner" style="display: flex; transition: transform 0.5s ease-in-out;">
+    <div class="carousel-item" style=" flex: 0 0 100%;">
       <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-6">
@@ -243,7 +281,7 @@
         </div>
       </div>
     </div>
-    <div class="carousel-item ">
+    <div class="carousel-item " style=" flex: 0 0 100%;">
       <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-6">
@@ -255,7 +293,7 @@
         </div>
       </div>
     </div>
-    <div class="carousel-item ">
+    <div class="carousel-item " style=" flex: 0 0 100%;">
       <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
           <div class="col-md-6">
@@ -281,7 +319,7 @@
 
 
    <!-- slider second images -->
-   <div id="carouselsecondsection" class="carousel slide mt-5 mb-5 d-none d-md-block ">
+   <div id="carouselsecondsection" class="carousel slide mt-5 mb-5 d-none d-md-block " *ngIf="showContent">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="container-fluid">
@@ -333,7 +371,7 @@
 
 <!-- middle body -->
 
-  <div class="container-body p-2 p-md-5" style="font-family: sans-serif;">
+  <div class="container-body p-2 p-md-5" style="font-family: sans-serif;" *ngIf="showContent">
 <img src="https://sandbox.elemisthemes.com/assets/img/photos/blurry.png" class="position-absolute top-0 start-0 w-100 h-100 opacity-50" alt="Background Image" style="object-fit: cover; z-index: -1;">
     <div class="row justify-content-md-center mt-3 mt-md-5 mb-2 mb-md-2">
       <h1 class="container-title display-3 col-md-6 col-12" style="color: #605dba;" >
@@ -350,7 +388,7 @@
 
 
 <!-- cards section -->
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="showContent">
 <img src="https://sandbox.elemisthemes.com/assets/img/photos/blurry.png" class="position-absolute top-0 start-0 w-100 h-100 opacity-50" alt="Background Image" style="object-fit: cover; z-index: -1;">
     <div class="col">
       <div class="card h-100">
@@ -551,3 +589,6 @@
     </div>
   </div>
 </div>
+
+
+<router-outlet></router-outlet>

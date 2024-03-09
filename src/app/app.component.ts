@@ -1,18 +1,50 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, ViewChild, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { Router, NavigationEnd  } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy, AfterViewInit  {
+  showContent: boolean = true;
+  
+  @ViewChild('carousel')
+  carousel!: ElementRef;
 
-  constructor() {}
+  ngAfterViewInit() {
+    const carouselElement = this.carousel.nativeElement;
+    const carouselItems = carouselElement.querySelectorAll('.carousel-item');
 
+    // Set initial slide
+    let currentSlide = 0;
+    carouselItems[currentSlide].classList.add('active');
+
+    setInterval(() => {
+      carouselItems[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % carouselItems.length;
+      carouselItems[currentSlide].classList.add('active');
+    }, 2000);
+  }
+
+  constructor(private router: Router) {}
+
+  navigateToDemothree(){
+    this.router.navigate(['/demo-three']);
+  }
+ 
   ngOnInit(): void {
     this.startUpdatingTagline();
     this.startGeneratingNumbers();
+
+    //router content condition
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showContent = !['/demo-three'].includes(event.url);
+      }
+    });
   }
 
   ngOnDestroy(): void {
