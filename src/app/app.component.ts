@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ViewChild, OnInit, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { Router, NavigationEnd  } from '@angular/router';
 
@@ -8,26 +8,10 @@ import { Router, NavigationEnd  } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewInit  {
+export class AppComponent implements OnInit, OnDestroy  {
   showContent: boolean = true;
   
-  @ViewChild('carousel')
-  carousel!: ElementRef;
-
-  ngAfterViewInit() {
-    const carouselElement = this.carousel.nativeElement;
-    const carouselItems = carouselElement.querySelectorAll('.carousel-item');
-
-    // Set initial slide
-    let currentSlide = 0;
-    carouselItems[currentSlide].classList.add('active');
-
-    setInterval(() => {
-      carouselItems[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % carouselItems.length;
-      carouselItems[currentSlide].classList.add('active');
-    }, 2000);
-  }
+ 
 
   constructor(private router: Router) {}
 
