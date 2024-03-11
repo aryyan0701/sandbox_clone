@@ -11,8 +11,6 @@ import { Router, NavigationEnd  } from '@angular/router';
 export class AppComponent implements OnInit, OnDestroy  {
   showContent: boolean = true;
   
- 
-
   constructor(private router: Router) {}
 
   navigateToDemothree(){
@@ -56,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy  {
 
 //for middle section number update
   randomNumber: number = 0;
-  incrementValue: number = 3;
+  incrementValue: number = 5;
   intervalSubscription: Subscription = new Subscription()
 
   startGeneratingNumbers(): void {
