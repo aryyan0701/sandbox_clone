@@ -1,54 +1,31 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { Router, NavigationEnd  } from '@angular/router';
 
 @Component({
-  selector: 'app-demo-three',
-  templateUrl: './demo-three.component.html',
-  styleUrls: ['./demo-three.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class DemoThreeComponent implements OnInit, OnDestroy  {
+export class HomeComponent implements  OnInit, OnDestroy  {
+  showContent: boolean = true;
   
+  constructor(private router: Router) {}
 
-  hoverColor: string = '#54a8c7'; 
-  currentColor: string = '#343f52'; 
-  firstHovered: boolean = false;
-  secondHovered: boolean = false;
-  thirdHovered: boolean = false;
-
-//for middle section number update
-randomNumber: number = 0;
-incrementValue: number = 5;
-intervalSubscription: Subscription = new Subscription()
-
-startGeneratingNumbers(): void {
-  this.intervalSubscription = interval(100).subscribe(() => {
-   
-    this.randomNumber += this.incrementValue;
-
-    if (this.randomNumber >= 100) {
-
-      this.stopGeneratingNumbers();
-      
-      this.randomNumber = 0;
-
-      setTimeout(() => {
-        this.startGeneratingNumbers();
-      }, 200); 
-    }
-  });
-}
-
-stopGeneratingNumbers(): void {
-  if (this.intervalSubscription) {
-    this.intervalSubscription.unsubscribe();
+  navigateToDemothree(){
+    this.router.navigate(['/demo-three']);
   }
-}
-
-
-
+ 
   ngOnInit(): void {
     this.startUpdatingTagline();
     this.startGeneratingNumbers();
+
+    //router content condition
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showContent = !['/demo-three'].includes(event.url);
+      }
+    });
   }
 
   ngOnDestroy(): void {
@@ -57,7 +34,7 @@ stopGeneratingNumbers(): void {
   }
 
   //for main section tagline
-  taglines: string[] = ['Customer Satisfaction', 'business needs', 'creative ideas']; 
+  taglines: string[] = ['Your Portfolio.', 'Your Startups.', 'Your Business.', 'Digital marketing.']; 
   currentTagline: string = ''; 
   intervalSubscription_fortagline: Subscription = new Subscription();
 
@@ -71,6 +48,38 @@ stopGeneratingNumbers(): void {
   stopUpdatingTagline(): void {
     this.intervalSubscription.unsubscribe();
   }
+
+
+
+//for middle section number update
+  randomNumber: number = 0;
+  incrementValue: number = 5;
+  intervalSubscription: Subscription = new Subscription()
+
+  startGeneratingNumbers(): void {
+    this.intervalSubscription = interval(100).subscribe(() => {
+     
+      this.randomNumber += this.incrementValue;
+
+      if (this.randomNumber >= 100) {
+
+        this.stopGeneratingNumbers();
+        
+        this.randomNumber = 0;
+
+        setTimeout(() => {
+          this.startGeneratingNumbers();
+        }, 200); 
+      }
+    });
+  }
+
+  stopGeneratingNumbers(): void {
+    if (this.intervalSubscription) {
+      this.intervalSubscription.unsubscribe();
+    }
+  }
+
 
   showDropdownMenu(event: MouseEvent) {
     const target = event.target as HTMLElement;
@@ -93,4 +102,6 @@ stopGeneratingNumbers(): void {
       }
     }
   }
+
 }
+
