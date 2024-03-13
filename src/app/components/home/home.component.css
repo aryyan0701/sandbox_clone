@@ -7,7 +7,7 @@
   }
 
   .first {
-    width: 800px; /* Adjust as needed */
+    width: 800px; 
   }
 
   .third{
@@ -16,5 +16,12 @@
 
   .five{
     width: 800px;
-    height: 800px;
+  }
+
+  .popup-animation {
+    transition: transform 0.3s ease;
+  }
+  
+  .popup-animation:hover {
+    transform: scale(1.04);
   }
