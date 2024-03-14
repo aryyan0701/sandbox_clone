@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DemoThreeComponent } from './components/demo-three/demo-three.component';
+import { DemoOneComponent } from './components/demo-one/demo-one.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   
   { path: '', component: HomeComponent } ,
-  { path: 'demo-three', component: DemoThreeComponent } ,
+  { path: 'demo-one', component: DemoOneComponent } ,
   { path: '', redirectTo:'/', pathMatch: 'full' } ,
   { path: '**', redirectTo:'/', pathMatch: 'full' } 
 ];

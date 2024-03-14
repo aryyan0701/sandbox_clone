@@ -12,8 +12,8 @@ export class HomeComponent implements  OnInit, OnDestroy  {
   
   constructor(private router: Router) {}
 
-  navigateToDemothree(){
-    this.router.navigate(['/demo-three']);
+  navigateToDemo_one(){
+    this.router.navigate(['/demo-one']);
   }
  
   ngOnInit(): void {

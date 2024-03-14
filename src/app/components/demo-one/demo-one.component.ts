@@ -3,10 +3,10 @@ import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-demo-three',
-  templateUrl: './demo-three.component.html',
-  styleUrls: ['./demo-three.component.css']
+  templateUrl: './demo-one.component.html',
+  styleUrls: ['./demo-one.component.css']
 })
-export class DemoThreeComponent implements OnInit, OnDestroy  {
+export class DemoOneComponent implements OnInit, OnDestroy  {
   
 
   hoverColor: string = '#54a8c7'; 
