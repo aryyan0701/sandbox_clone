@@ -14,7 +14,7 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 ## Quick Intro
 
 ### Home page
-![Home Page](./src/assets/homepage.png)
+![Home Page](./src/assets/home.PNG)
 
 ### Portfolio Designs
 ![Portfolio](./src/assets/portfolio.png)
