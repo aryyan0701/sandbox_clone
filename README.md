@@ -25,7 +25,7 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 </div>
 
 
-### features
+### Frontpage features
 <div style="overflow: auto;">
     <img src="./src/assets/demos.png" alt="Blogs" style="width: 49%; float: left; margin-right: 1%;">
     <img src="./src/assets/pages.png" alt="Pages" style="width: 49%; float: left;">
@@ -38,6 +38,17 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 
 <div style="overflow: auto;">
     <img src="./src/assets/doc.png" alt="Project" style="width: 49%; float: left; margin-right: 1%;">
+</div>
+
+### Demo-one Page features
+<div style="overflow: auto;">
+    <img src="./src/assets/demo1.PNG" alt="Blogs" style="width: 49%; float: left; margin-right: 1%;">
+    <img src="./src/assets/choose.PNG" alt="Pages" style="width: 49%; float: left;">
+</div>
+
+<div style="overflow: auto;">
+    <img src="./src/assets/pricing.PNG" alt="Project" style="width: 49%; float: left; margin-right: 1%;">
+    <img src="./src/assets/contact.PNG" alt="Project" style="width: 49%; float: left;">
 </div>
      
 
