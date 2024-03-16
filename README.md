@@ -26,13 +26,13 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
  <div class="container">
     <div class="row">
       <div class="col-4">
-        <img class="img-fluid" src="./assets/demos.png"/>
+        <img class="img-fluid" src="./assets/blogs.PNG"/>
       </div>
       <div class="col-4">
-        <img class="img-fluid" src="./assets/pages.png"/>
+        <img class="img-fluid" src="./assets/pages.PNG"/>
       </div>
       <div class="col-4">
-        <img class="img-fluid" src="./assets/project.png"/>
+        <img class="img-fluid" src="./assets/project.PNG"/>
       </div>
     </div>
   </div>
