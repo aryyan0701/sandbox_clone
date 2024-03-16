@@ -22,6 +22,21 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 ### Web Pages
 ![Web Pages](./src/assets/webpages.PNG)
 
+### features
+ <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <img src="./assets/demos.png"/>
+      </div>
+      <div class="col-4">
+        <img src="./assets/pages.png"/>
+      </div>
+      <div class="col-4">
+        <img src="./assets/project.png"/>
+      </div>
+    </div>
+  </div>
+
 
 ## Getting Started
 
