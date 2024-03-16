@@ -20,7 +20,7 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 ![Portfolio](./src/assets/portfolio.PNG)
 
 ### Web Pages
-![Web Pages](./src/assets/webpages.png)
+![Web Pages](./src/assets/webpages.PNG)
 
 
 ## Getting Started
