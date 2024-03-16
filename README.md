@@ -17,7 +17,7 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 ![Home Page](./src/assets/home.PNG)
 
 ### Portfolio Designs
-![Portfolio](./src/assets/portfolio.png)
+![Portfolio](./src/assets/portfolio.PNG)
 
 ### Web Pages
 ![Web Pages](./src/assets/webpages.png)
