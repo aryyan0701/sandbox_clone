@@ -13,30 +13,33 @@ Welcome to the Sandbox Clone Website! This project is a clone of the Sandbox web
 
 ## Quick Intro
 
-### Home page
-![Home Page](./src/assets/home.PNG)
+### Diff sec of front page 
+<div style="overflow: auto;">
+    <img src="./src/assets/home.PNG" alt="Blogs" style="width: 49%; float: left; margin-right: 1%;">
+    <img src="./src/assets/portfolio.PNG" alt="Pages" style="width: 49%; float: left;">
+</div>
 
-### Portfolio Designs
-![Portfolio](./src/assets/portfolio.PNG)
+<div style="overflow: auto;">
+    <img src="./src/assets/webpages.PNG" alt="Blogs" style="width: 49%; float: left;  margin-right: 1%; ">
+    <img src="./src/assets/feat.PNG" alt="Project" style="width: 49%; float: left;">
+</div>
 
-### Web Pages
-![Web Pages](./src/assets/webpages.PNG)
 
 ### features
- <div class="container">
-    <div class="row">
-      <div class="col-4">
-        ![Blogs](./src/assets/blogs.PNG)
-      </div>
-      <div class="col-4">
-       ![Pages](./src/assets/pages.PNG)
-      </div>
-      <div class="col-4">
-      ![Project](./src/assets/project.PNG)
-      </div>
-    </div>
-  </div>
+<div style="overflow: auto;">
+    <img src="./src/assets/demos.png" alt="Blogs" style="width: 49%; float: left; margin-right: 1%;">
+    <img src="./src/assets/pages.png" alt="Pages" style="width: 49%; float: left;">
+</div>
 
+<div style="overflow: auto;">
+    <img src="./src/assets/project.png" alt="Project" style="width: 49%; float: left; margin-right: 1%;">
+    <img src="./src/assets/blogs.png" alt="Project" style="width: 49%; float: left;">
+</div>
+
+<div style="overflow: auto;">
+    <img src="./src/assets/doc.png" alt="Project" style="width: 49%; float: left; margin-right: 1%;">
+</div>
+     
 
 ## Getting Started
 
